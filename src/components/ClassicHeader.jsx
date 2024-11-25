@@ -46,7 +46,7 @@ const ClassicHeader = ({ handleNavClick }) => {
               style={{ cursor: "pointer" }}
               className="logo"
               to="home"  // Lien vers la section "home"
-              title="Simone"
+              title="Mariam"
               onClick={(e) => {
                 e.preventDefault();
                 setIsNavModalClose(true); // Ferme le menu mobile lorsque l'on clique sur le logo
