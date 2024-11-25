@@ -59,7 +59,7 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                 <li>
                   <span className="fw-600 me-2">Email :</span>
                   <a href="mailto:mariame.dibaga@gmail.com">
-                    mariam.dibaga@gmail.com
+                    mariame.dibaga@gmail.com
                   </a>
                 </li>
                 <li>

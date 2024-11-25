@@ -141,7 +141,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
                 (darkTheme ? "text-white" : "")
               }
             >
-              Envoyez-nous un message
+              Envoyez-moi un message
             </h2>
             <form
               className={darkTheme ? "form-dark" : ""}

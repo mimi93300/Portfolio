@@ -4,24 +4,25 @@ import resumeFile from "../documents/resume.pdf";
 const Resume = ({ classicHeader, darkTheme }) => {
   const educationDetails = [
     {
-      yearRange: "2000 - 2004",
-      title: "Computer Science",
-      place: "International University",
-      desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      yearRange: "2024",
+      title: "Développeur Intégrateur Web",
+      place: "OpenClassrooms",
+      desc: "Formation axée sur le développement et l'intégration de sites web responsives, l'utilisation des technologies front-end comme HTML, CSS, JavaScript, et React. Développement de compétences pour créer des interfaces utilisateur intuitives et fonctionnelles.",
     },
     {
-      yearRange: "2005 - 2008",
-      title: "Bachelor Degree",
-      place: "University of California",
-      desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      yearRange: "2008 - 2010",
+      title: "BTS Assistant Manager",
+      place: "Lycée Jules Siegfried, Paris",
+      desc: "Formation en management, gestion administrative et accompagnement des équipes. Acquisition de compétences en communication, gestion des ressources humaines, et organisation du travail.",
     },
     {
-      yearRange: "2009 - 2012",
-      title: "Master Degree",
-      place: "Harvard University",
-      desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      yearRange: "2008",
+      title: "Bac STG Option Ressources Humaines",
+      place: "Lycée Sophie Germain, Paris",
+      desc: "Diplôme préparant aux métiers de la gestion des ressources humaines, avec un accent sur la gestion de la paie, le recrutement et la gestion des relations sociales en entreprise.",
     },
   ];
+  
 
   const skills = [
     {

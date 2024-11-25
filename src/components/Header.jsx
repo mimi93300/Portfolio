@@ -30,7 +30,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
               />
             </span>
             <h1 className="text-5 text-white text-center mb-0 d-lg-block">
-              Mariam Dibaga
+              Mariam D
             </h1>
           </Link>
           {/* Logo End */}
@@ -129,7 +129,8 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
                   Portfolio
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* Témoignages link commented out */}
+              {/* <li className="nav-item">
                 <Link
                   className="nav-link "
                   smooth
@@ -145,7 +146,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
                 >
                   Témoignages
                 </Link>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <Link
                   className="nav-link "
