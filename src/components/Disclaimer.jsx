@@ -19,7 +19,7 @@ const Disclaimer = ({ darkTheme }) => {
         >
           <div className="modal-header">
             <h5 className={"modal-title " + (darkTheme ? "text-white" : "")}>
-              Copyright &amp; Disclaimer
+              Copyright & Mentions Légales
             </h5>
             <button
               type="button"
@@ -30,41 +30,29 @@ const Disclaimer = ({ darkTheme }) => {
           </div>
           <div className="modal-body p-4">
             <p>
-              Simply dummy text of the printing and typesetting industry. Lorem
-              Ipsum has been the industry's standard dummy text ever since the
-              1500s, when an unknown printer took a galley of type and scrambled
-              it to make a type specimen book.
+              Texte d'exemple provenant de l'industrie de l'impression et de la composition. Lorem Ipsum est le texte standard utilisé dans l'industrie de l'impression depuis les années 1500, lorsqu'un imprimeur inconnu a pris un ensemble de caractères et les a mélangés pour créer un spécimen de texte.
             </p>
             <ul className="lh-lg">
               <li>
-                Lisque persius interesset his et, in quot quidam persequeris
-                vim, ad mea essent possim iriure.
+                Exemple de texte juridique ou d'information pertinente à afficher ici.
               </li>
               <li>
-                Quidam lisque persius interesset his et, Lisque persius
-                interesset his et, in quot quidam persequeris vim, ad mea essent
-                possim iriure.
+                Liste des droits d'auteur ou des responsabilités légales.
               </li>
               <li>
-                In quot quidam persequeris vim, ad mea essent possim iriure.
-                Quidam lisque persius interesset his et.
+                Autres informations sur les termes et conditions ou autres clauses importantes.
               </li>
               <li>
-                Quidam lisque persius interesset his et, Lisque persius
-                interesset his et.
+                Une autre mention légale ou condition supplémentaire.
               </li>
               <li>
-                Interesset his et, Lisque persius interesset his et, in quot
-                quidam persequeris vim, ad mea essent possim iriure.
+                Informations sur la politique de confidentialité ou de traitement des données personnelles.
               </li>
               <li>
-                Persius interesset his et, Lisque persius interesset his et, in
-                quot quidam persequeris vim, ad mea essent possim iriure.
+                Mentions légales concernant les responsabilités du site web.
               </li>
               <li>
-                Quot quidam persequeris vim Quidam lisque persius interesset his
-                et, Lisque persius interesset his et, in quot quidam persequeris
-                vim, ad mea essent possim iriure.
+                Autres conditions ou exigences légales en fonction du domaine d'application.
               </li>
             </ul>
           </div>

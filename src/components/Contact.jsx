@@ -22,7 +22,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
       .then(
         (result) => {
           document.getElementById("contact-form").reset();
-          toast.success("Message sent successfully!", {
+          toast.success("Message envoyé avec succès !", {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
@@ -36,7 +36,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
           setSendingMail(false);
         },
         (error) => {
-          toast.error("Something went wrong!", {
+          toast.error("Une erreur s'est produite !", {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
@@ -58,7 +58,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
       className={"section " + (darkTheme ? "bg-dark-2" : "bg-light")}
     >
       <div className={"container " + (classicHeader ? "" : "px-lg-5")}>
-        {/* Heading */}
+        {/* En-tête */}
         <div className="position-relative d-flex text-center mb-5">
           <h2
             className={
@@ -75,52 +75,53 @@ const Contact = ({ classicHeader, darkTheme }) => {
             }
           >
             {" "}
-            Get in Touch
+            Entrer en contact
             <span className="heading-separator-line border-bottom border-3 border-primary d-block mx-auto" />
           </p>
         </div>
-        {/* Heading end*/}
+        {/* Fin de l'en-tête */}
         <div className="row gy-5">
-          {/* contact details */}
+          {/* Coordonnées */}
           <div className="col-md-4 col-xl-3 order-1 order-md-0 text-center text-md-start">
             <h2
               className={
                 "mb-3 text-5 text-uppercase " + (darkTheme ? "text-white" : "")
               }
             >
-              Address
+              Adresse
             </h2>
             <p className={"text-3 mb-4 " + (darkTheme ? "text-light" : "")}>
-              4th Floor, Plot No.22,
+              49bis avenue de Flandre
               <br />
-              145 Murphy Canyon Rd.
+              Hall 2
               <br />
-              San Diego CA 2028
+              75019 Paris
+            </p>
+            <p className={"text-3 mb-1 " + (darkTheme ? "text-light" : "")}>
+              <span className="text-primary text-4 me-2">
+                <i className="fas fa-mobile-alt" />
+              </span>
+              (+33) 6 79 54 80 39
             </p>
             <p className={"text-3 mb-1 " + (darkTheme ? "text-light" : "")}>
               <span className="text-primary text-4 me-2">
                 <i className="fas fa-phone" />
               </span>
-              (060) 444 434 444
+              (+33) 1 40 35 51 92
             </p>
-            <p className={"text-3 mb-1 " + (darkTheme ? "text-light" : "")}>
-              <span className="text-primary text-4 me-2">
-                <i className="fas fa-fax" />
-              </span>
-              (060) 555 545 555
-            </p>
+
             <p className={"text-3 mb-4 " + (darkTheme ? "text-light" : "")}>
               <span className="text-primary text-4 me-2">
                 <i className="fas fa-envelope" />
               </span>
-              chat@simone.com
+              mariame.dibaga@gmail.com
             </p>
             <h2
               className={
                 "mb-3 text-5 text-uppercase " + (darkTheme ? "text-white" : "")
               }
             >
-              Follow Me
+              Suivez-moi
             </h2>
             <ul
               className={
@@ -128,64 +129,11 @@ const Contact = ({ classicHeader, darkTheme }) => {
                 (darkTheme ? "social-icons-muted" : "")
               }
             >
-              <li className="social-icons-dribbble">
-                <Tooltip text="Dribbble" placement="top">
-                  <a
-                    href="http://www.dribbble.com/harnishdesign/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="fab fa-dribbble" />
-                  </a>
-                </Tooltip>
-              </li>
-              <li className="social-icons-twitter">
-                <Tooltip text="Twitter" placement="top">
-                  <a
-                    href="https://twitter.com/harnishdesign/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="fab fa-twitter" />
-                  </a>
-                </Tooltip>
-              </li>
-              <li className="social-icons-facebook">
-                <Tooltip text="Facebook" placement="top">
-                  <a
-                    href="http://www.facebook.com/harnishdesign/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="fab fa-facebook-f" />
-                  </a>
-                </Tooltip>
-              </li>
-              <li className="social-icons-google">
-                <Tooltip text="Google" placement="top">
-                  <a
-                    href="http://www.google.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="fab fa-google" />
-                  </a>
-                </Tooltip>
-              </li>
-              <li className="social-icons-github">
-                <Tooltip text="Github" placement="top">
-                  <a
-                    href="http://www.github.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="fab fa-github" />
-                  </a>
-                </Tooltip>
-              </li>
+              {/* Réseaux sociaux */}
+              {/* Icônes des réseaux sociaux traduites si nécessaires */}
             </ul>
           </div>
-          {/* contact form */}
+          {/* Formulaire de contact */}
           <div className="col-md-8 col-xl-9 order-0 order-md-1">
             <h2
               className={
@@ -193,13 +141,11 @@ const Contact = ({ classicHeader, darkTheme }) => {
                 (darkTheme ? "text-white" : "")
               }
             >
-              Send us a note
+              Envoyez-nous un message
             </h2>
             <form
               className={darkTheme ? "form-dark" : ""}
               id="contact-form"
-              action="php/mail.php"
-              method="post"
               ref={form}
               onSubmit={sendEmail}
             >
@@ -210,7 +156,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
                     type="text"
                     className="form-control"
                     required
-                    placeholder="Name"
+                    placeholder="Nom"
                   />
                 </div>
                 <div className="col-xl-6">
@@ -219,7 +165,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
                     type="email"
                     className="form-control"
                     required
-                    placeholder="Email"
+                    placeholder="E-mail"
                   />
                 </div>
                 <div className="col">
@@ -228,7 +174,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
                     className="form-control"
                     rows={5}
                     required
-                    placeholder="Tell us more about your needs........"
+                    placeholder="Dites-nous en plus sur vos besoins........"
                     defaultValue={""}
                   />
                 </div>
@@ -246,10 +192,10 @@ const Contact = ({ classicHeader, darkTheme }) => {
                         aria-hidden="true"
                         class="spinner-border spinner-border-sm align-self-center me-2"
                       ></span>
-                      Sending.....
+                      Envoi.....
                     </>
                   ) : (
-                    <>Send Message</>
+                    <>Envoyer le message</>
                   )}
                 </button>
               </p>

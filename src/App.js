@@ -1,6 +1,6 @@
 import "./App.scss";
 import Header from "./components/Header";
-import Home from "./components/Home";
+import Home from "./components/Home"; // Non traduit, comme demandé
 import AboutUs from "./components/About";
 import Services from "./components/Services";
 import Resume from "./components/Resume";
@@ -60,9 +60,11 @@ function App() {
         style={{ position: "relative" }}
         className={classicHeader ? "" : "side-header"}
       >
+        {/* Préchargement */}
         {isLoading && <PreLoader></PreLoader>}
 
         <div id="main-wrapper">
+          {/* En-tête */}
           {classicHeader ? (
             <ClassicHeader handleNavClick={handleNavClick}></ClassicHeader>
           ) : (
@@ -70,6 +72,7 @@ function App() {
           )}
 
           <div id="content" role="main">
+            {/* Sections principales */}
             <Home
               classicHeader={classicHeader}
               darkTheme={darkTheme}
@@ -100,14 +103,15 @@ function App() {
               darkTheme={darkTheme}
             ></Contact>
           </div>
+          {/* Pied de page */}
           <Footer
             classicHeader={classicHeader}
             darkTheme={darkTheme}
             handleNavClick={handleNavClick}
           ></Footer>
         </div>
-        {/* back to top */}
-        <Tooltip text="Back to Top" placement="left">
+        {/* Retour en haut */}
+        <Tooltip text="Retour en haut" placement="left">
           <span
             id="back-to-top"
             className="rounded-circle"
@@ -120,6 +124,7 @@ function App() {
           </span>
         </Tooltip>
 
+        {/* Mentions légales */}
         <TermsAndConditions darkTheme={darkTheme}></TermsAndConditions>
         <Disclaimer darkTheme={darkTheme}></Disclaimer>
       </div>

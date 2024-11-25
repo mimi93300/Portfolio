@@ -132,4 +132,10 @@ const Testimonials = ({ classicHeader, darkTheme }) => {
   );
 };
 
+/*
 export default Testimonials;
+*/
+
+export default () => null;
+
+

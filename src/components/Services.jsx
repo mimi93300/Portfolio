@@ -1,37 +1,37 @@
 import React from "react";
 
 const Services = ({ classicHeader, darkTheme }) => {
-  // services details
+  // Détails des services
   const services = [
     {
-      name: "Graphic Design",
-      desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-      icon: "fas fa-palette",
+      name: "Création de sites web modernes",
+      desc: "Développement de sites web responsives utilisant les dernières technologies comme JavaScript, React, et HTML/CSS.",
+      icon: "fas fa-code",
     },
     {
-      name: "Web Design",
-      desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-      icon: "fas fa-desktop",
+      name: "Applications React",
+      desc: "Conception et développement d'applications web dynamiques et performantes avec React et Redux.",
+      icon: "fas fa-layer-group",
     },
     {
-      name: "UI/UX Design",
-      desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-      icon: "fas fa-pencil-ruler",
+      name: "Optimisation pour les moteurs de recherche (SEO)",
+      desc: "Amélioration de la visibilité de votre site sur les moteurs de recherche grâce à des techniques d'optimisation avancées.",
+      icon: "fas fa-search",
     },
     {
-      name: "App Design & Develop",
-      desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-      icon: "fas fa-paint-brush",
+      name: "Maintenance et support",
+      desc: "Gestion des mises à jour, correction de bugs, et assistance technique pour garantir la continuité de vos services.",
+      icon: "fas fa-tools",
     },
     {
-      name: "Business Analysis",
-      desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-      icon: "fas fa-chart-area",
+      name: "Refonte d'interface utilisateur (UI/UX)",
+      desc: "Modernisation et optimisation de l'expérience utilisateur pour rendre votre site plus intuitif et attrayant.",
+      icon: "fas fa-pencil-alt",
     },
     {
-      name: "SEO Marketing",
-      desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-      icon: "fas fa-bullhorn",
+      name: "Conseils et analyse de projets",
+      desc: "Analyse des besoins et recommandations pour définir les solutions web les plus adaptées à vos objectifs.",
+      icon: "fas fa-chart-line",
     },
   ];
 
@@ -41,28 +41,28 @@ const Services = ({ classicHeader, darkTheme }) => {
       className={"section " + (darkTheme ? "bg-dark-2" : "bg-light")}
     >
       <div className={"container " + (classicHeader ? "" : "px-lg-5")}>
-        {/* Heading */}
+        {/* En-tête */}
         <div className="position-relative d-flex text-center mb-5">
           <h2
             className={
-              "text-24  text-uppercase fw-600 w-100 mb-0 " +
-              (darkTheme ? "text-white-50  opacity-1" : "text-light  opacity-4")
+              "text-24 text-uppercase fw-600 w-100 mb-0 " +
+              (darkTheme ? "text-white-50 opacity-1" : "text-light opacity-4")
             }
           >
             Services
           </h2>
           <p
             className={
-              "text-9  fw-600 position-absolute w-100 align-self-center lh-base mb-0 " +
+              "text-9 fw-600 position-absolute w-100 align-self-center lh-base mb-0 " +
               (darkTheme ? "text-white" : "text-dark")
             }
           >
-            What I Do?
+            Ce que je propose
             <span className="heading-separator-line border-bottom border-3 border-primary d-block mx-auto" />
           </p>
         </div>
-        {/* Heading end*/}
-        {/* content start */}
+        {/* En-tête fin */}
+        {/* Contenu début */}
         <div className="row">
           <div className="col-lg-11 mx-auto">
             <div className="row">
@@ -72,7 +72,7 @@ const Services = ({ classicHeader, darkTheme }) => {
                     <div className="featured-box style-3 mb-5">
                       <div
                         className={
-                          "featured-box-icon text-primary  shadow-sm rounded " +
+                          "featured-box-icon text-primary shadow-sm rounded " +
                           (darkTheme ? "bg-dark-1" : "bg-white")
                         }
                       >
@@ -92,7 +92,7 @@ const Services = ({ classicHeader, darkTheme }) => {
             </div>
           </div>
         </div>
-        {/* content end */}
+        {/* Contenu fin */}
       </div>
     </section>
   );

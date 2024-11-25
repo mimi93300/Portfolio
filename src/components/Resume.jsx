@@ -4,50 +4,32 @@ import resumeFile from "../documents/resume.pdf";
 const Resume = ({ classicHeader, darkTheme }) => {
   const educationDetails = [
     {
-      yearRange: "2000 - 2004",
-      title: "Computer Science",
-      place: "International University",
-      desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      yearRange: "2011 - 2013",
+      title: "BTS Assistant Manager",
+      place: "Lycée Jules Siegfried, Paris",
+      desc: "Formation en gestion administrative, communication, et organisation d'activités professionnelles.",
     },
     {
-      yearRange: "2005 - 2008",
-      title: "Bachelor Degree",
-      place: "University of California",
-      desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-    },
-    {
-      yearRange: "2009 - 2012",
-      title: "Master Degree",
-      place: "Harvard University",
-      desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      yearRange: "2009 - 2011",
+      title: "Bac Sciences et Technologies de la Gestion",
+      place: "Lycée Sophie Germain, Paris",
+      desc: "Formation en économie, gestion et communication pour le développement de compétences polyvalentes.",
     },
   ];
 
   const experienceDetails = [
     {
-      yearRange: "2012 - 2013",
-      title: "Jr. UI UX Designer",
-      place: "Themeforest",
-      desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-    },
-    {
-      yearRange: "2014 - 2016",
-      title: "Jr. Product Designer",
-      place: "Dribbble",
-      desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-    },
-    {
-      yearRange: "2017 - 2019",
-      title: "Product Designer",
-      place: "Adobe",
-      desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      yearRange: "2023 - Présent",
+      title: "Développeuse Web en formation",
+      place: "OpenClassrooms",
+      desc: "Création de projets complets, intégration de maquettes en HTML/CSS, développement d'applications React et gestion de bases de données MongoDB.",
     },
   ];
 
   const skills = [
     {
-      name: "Web Design",
-      percent: 65,
+      name: "SEO",
+      percent: 70,
     },
     {
       name: "HTML/CSS",
@@ -59,15 +41,15 @@ const Resume = ({ classicHeader, darkTheme }) => {
     },
     {
       name: "React JS",
-      percent: 70,
+      percent: 75,
     },
     {
-      name: "Angular Js",
+      name: "MongoDB",
       percent: 60,
     },
     {
-      name: "Bootstrap",
-      percent: 99,
+      name: "Responsive Design",
+      percent: 90,
     },
   ];
 
@@ -81,129 +63,113 @@ const Resume = ({ classicHeader, darkTheme }) => {
         <div className="position-relative d-flex text-center mb-5">
           <h2
             className={
-              "text-24  text-uppercase fw-600 w-100 mb-0 " +
+              "text-24 text-uppercase fw-600 w-100 mb-0 " +
               (darkTheme ? "text-muted opacity-1" : "text-light opacity-4")
             }
           >
-            Summary
+            Résumé
           </h2>
           <p
             className={
-              "text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0 " +
+              "text-9 fw-600 position-absolute w-100 align-self-center lh-base mb-0 " +
               (darkTheme ? "text-white" : "text-dark")
             }
           >
-            {" "}
-            Resume
+            Mon parcours
             <span className="heading-separator-line border-bottom border-3 border-primary d-block mx-auto" />
           </p>
         </div>
-        {/* Heading end*/}
+        {/* Heading end */}
         <div className="row gx-5">
-          {/* My Education */}
+          {/* Education */}
           <div className="col-md-6">
-            <h2
-              className={
-                "text-6 fw-600 mb-4 " + (darkTheme ? "text-white" : "")
-              }
-            >
-              My Education
+            <h2 className={"text-6 fw-600 mb-4 " + (darkTheme ? "text-white" : "")}>
+              Formation
             </h2>
-            {educationDetails.length > 0 &&
-              educationDetails.map((value, index) => (
-                <div
-                  key={index}
-                  className={
-                    "bg-white  rounded p-4 mb-4 " +
-                    (darkTheme ? "bg-dark" : "bg-white border")
-                  }
-                >
-                  <p className="badge bg-primary text-2 fw-400">
-                    {value.yearRange}
-                  </p>
-                  <h3 className={"text-5 " + (darkTheme ? "text-white" : "")}>
-                    {value.title}
-                  </h3>
-                  <p className={darkTheme ? "text-primary" : "text-danger"}>
-                    {value.place}
-                  </p>
-                  <p className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
-                    {value.desc}
-                  </p>
-                </div>
-              ))}
-          </div>
-          {/* My Experience */}
-          <div className="col-md-6">
-            <h2
-              className={
-                "text-6 fw-600 mb-4 " + (darkTheme ? "text-white" : "")
-              }
-            >
-              My Experience
-            </h2>
-            {experienceDetails.length > 0 &&
-              experienceDetails.map((value, index) => (
-                <div
-                  key={index}
-                  className={
-                    "bg-white  rounded p-4 mb-4 " +
-                    (darkTheme ? "bg-dark" : "bg-white border")
-                  }
-                >
-                  <p className="badge bg-primary text-2 fw-400">
-                    {value.yearRange}
-                  </p>
-                  <h3 className={"text-5 " + (darkTheme ? "text-white" : "")}>
-                    {value.title}
-                  </h3>
-                  <p className={darkTheme ? "text-primary" : "text-danger"}>
-                    {value.place}
-                  </p>
-                  <p className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
-                    {value.desc}
-                  </p>
-                </div>
-              ))}
-          </div>
-        </div>
-        {/* My Skills */}
-        <h2
-          className={
-            "text-6 fw-600 mt-4 mb-4 " + (darkTheme ? "text-white" : "")
-          }
-        >
-          My Skills
-        </h2>
-        <div className="row gx-5">
-          {skills.length > 0 &&
-            skills.map((skill, index) => (
-              <div key={index} className="col-md-6">
-                <p
-                  className={
-                    " fw-500 text-start mb-2 " +
-                    (darkTheme ? "text-light" : "text-dark")
-                  }
-                >
-                  {skill.name}{" "}
-                  <span className="float-end">{skill.percent}%</span>
+            {educationDetails.map((value, index) => (
+              <div
+                key={index}
+                className={
+                  "bg-white rounded p-4 mb-4 " +
+                  (darkTheme ? "bg-dark" : "bg-white border")
+                }
+              >
+                <p className="badge bg-primary text-2 fw-400">
+                  {value.yearRange}
                 </p>
-                <div
-                  className={
-                    "progress progress-sm mb-4 " + (darkTheme ? "bg-dark" : "")
-                  }
-                >
-                  <div
-                    className="progress-bar"
-                    role="progressbar"
-                    style={{ width: skill.percent + "%" }}
-                    aria-valuenow={skill.percent}
-                    aria-valuemin={0}
-                    aria-valuemax={100}
-                  />
-                </div>
+                <h3 className={"text-5 " + (darkTheme ? "text-white" : "")}>
+                  {value.title}
+                </h3>
+                <p className={darkTheme ? "text-primary" : "text-danger"}>
+                  {value.place}
+                </p>
+                <p className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
+                  {value.desc}
+                </p>
               </div>
             ))}
+          </div>
+          {/* Experience */}
+          <div className="col-md-6">
+            <h2 className={"text-6 fw-600 mb-4 " + (darkTheme ? "text-white" : "")}>
+              Expérience
+            </h2>
+            {experienceDetails.map((value, index) => (
+              <div
+                key={index}
+                className={
+                  "bg-white rounded p-4 mb-4 " +
+                  (darkTheme ? "bg-dark" : "bg-white border")
+                }
+              >
+                <p className="badge bg-primary text-2 fw-400">
+                  {value.yearRange}
+                </p>
+                <h3 className={"text-5 " + (darkTheme ? "text-white" : "")}>
+                  {value.title}
+                </h3>
+                <p className={darkTheme ? "text-primary" : "text-danger"}>
+                  {value.place}
+                </p>
+                <p className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
+                  {value.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+        {/* Skills */}
+        <h2 className={"text-6 fw-600 mt-4 mb-4 " + (darkTheme ? "text-white" : "")}>
+          Mes compétences
+        </h2>
+        <div className="row gx-5">
+          {skills.map((skill, index) => (
+            <div key={index} className="col-md-6">
+              <p
+                className={
+                  "fw-500 text-start mb-2 " +
+                  (darkTheme ? "text-light" : "text-dark")
+                }
+              >
+                {skill.name}{" "}
+                <span className="float-end">{skill.percent}%</span>
+              </p>
+              <div
+                className={
+                  "progress progress-sm mb-4 " + (darkTheme ? "bg-dark" : "")
+                }
+              >
+                <div
+                  className="progress-bar"
+                  role="progressbar"
+                  style={{ width: skill.percent + "%" }}
+                  aria-valuenow={skill.percent}
+                  aria-valuemin={0}
+                  aria-valuemax={100}
+                />
+              </div>
+            </div>
+          ))}
         </div>
         <div className="text-center mt-5">
           <a
@@ -211,7 +177,7 @@ const Resume = ({ classicHeader, darkTheme }) => {
             href={resumeFile}
             download
           >
-            Download CV
+            Télécharger CV
             <span className="ms-1">
               <i className="fas fa-download" />
             </span>

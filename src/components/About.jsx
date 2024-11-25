@@ -1,55 +1,50 @@
 import React from "react";
 import resumeFile from "../documents/resume.pdf";
+
 const AboutUs = ({ classicHeader, darkTheme }) => {
   return (
     <section id="about" className={"section " + (darkTheme ? "bg-dark-1" : "")}>
       <div className={"container " + (classicHeader ? "" : "px-lg-5")}>
-        {/* Heading */}
+        {/* Titre */}
         <div className="position-relative d-flex text-center mb-5">
           <h2
             className={
-              "text-24  text-uppercase fw-600 w-100 mb-0 " +
+              "text-24 text-uppercase fw-600 w-100 mb-0 " +
               (darkTheme ? "text-muted opacity-1" : "text-light opacity-4")
             }
           >
-            About Me
+            À propos de moi
           </h2>
           <p
             className={
-              "text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0 " +
+              "text-9 fw-600 position-absolute w-100 align-self-center lh-base mb-0 " +
               (darkTheme ? "text-white" : "text-dark")
             }
           >
-            Know Me More
+            Apprenez à me connaître
             <span className="heading-separator-line border-bottom border-3 border-primary d-block mx-auto" />
           </p>
         </div>
-        {/* Heading end*/}
+        {/* Fin du titre */}
         <div className="row gy-5">
-          {/* About me content start */}
+          {/* Contenu de "À propos" */}
           <div className="col-lg-7 col-xl-8 text-center text-lg-start">
             <h2
               className={
                 "text-7 fw-600 mb-3 " + (darkTheme ? "text-white" : "")
               }
             >
-              I'm <span className="text-primary">Simone Olivia,</span> a Web
-              Developer
+              Je suis <span className="text-primary">Mariam Dibaga,</span> Développeuse Web et Intégratrice
             </h2>
             <p className={darkTheme ? "text-white-50" : ""}>
-              I help you build brand for your business at an affordable price.
-              Thousands of clients have procured exceptional results while
-              working with our dedicated team. when an unknown printer took a
-              galley of type and scrambled it to make a type specimen book.
+              Basée à Paris, je suis une passionnée du web en phase de finalisation de ma formation en développement et intégration web. J’aime concevoir des sites web responsifs et intuitifs qui répondent aux besoins des utilisateurs.
             </p>
             <p className={darkTheme ? "text-white-50" : ""}>
-              Delivering work within time and budget which meets client’s
-              requirements is our moto. Lorem Ipsum has been the industry's
-              standard dummy text ever when an unknown printer took a galley.
+              Au fil de mon parcours, j'ai développé mes compétences en HTML, CSS, JavaScript et React. Je m’efforcerai de fournir un travail de qualité tout en respectant les délais et les exigences des clients. La collaboration et la résolution de problèmes sont au cœur de mon approche professionnelle.
             </p>
           </div>
-          {/* About me content end */}
-          {/* about me personal detials start */}
+          {/* Fin du contenu "À propos" */}
+          {/* Détails personnels */}
           <div className="col-lg-5 col-xl-4">
             <div className="ps-lg-4">
               <ul
@@ -59,18 +54,16 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                 }
               >
                 <li>
-                  <span className="fw-600 me-2">Name:</span>Simone Olivia
+                  <span className="fw-600 me-2">Nom :</span>Mariam D
                 </li>
                 <li>
-                  <span className="fw-600 me-2">Email:</span>
-                  <a href="mailto:chat@simone.com">chat@simone.com</a>
+                  <span className="fw-600 me-2">Email :</span>
+                  <a href="mailto:mariame.dibaga@gmail.com">
+                    mariam.dibaga@gmail.com
+                  </a>
                 </li>
                 <li>
-                  <span className="fw-600 me-2">Age:</span>28
-                </li>
-                <li className="border-0">
-                  <span className="fw-600 me-2">From:</span>Los Angeles,
-                  California
+                  <span className="fw-600 me-2">Localisation :</span>Paris, France
                 </li>
               </ul>
               <a
@@ -78,13 +71,13 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                 download
                 className="btn btn-primary rounded-pill"
               >
-                Download CV
+                Télécharger mon CV
               </a>
             </div>
           </div>
-          {/* about me personal details end */}
+          {/* Fin des détails personnels */}
         </div>
-        {/* projects rewards counting start */}
+        {/* Compteurs de projets */}
         <div
           className={
             "brands-grid separator-border mt-5 " +
@@ -96,14 +89,14 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
               <div className="featured-box text-center">
                 <h4
                   className={
-                    "text-12  mb-0 " +
+                    "text-12 mb-0 " +
                     (darkTheme ? "text-white-50" : "text-muted")
                   }
                 >
-                  <span>10</span>+
+                  <span>2</span>+
                 </h4>
                 <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
-                  Years Experiance
+                  Années d'apprentissage
                 </p>
               </div>
             </div>
@@ -111,14 +104,14 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
               <div className="featured-box text-center">
                 <h4
                   className={
-                    "text-12  mb-0 " +
+                    "text-12 mb-0 " +
                     (darkTheme ? "text-white-50" : "text-muted")
                   }
                 >
-                  <span>250</span>+
+                  <span>1</span>+
                 </h4>
                 <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
-                  Happy Clients
+                  Projets réalisés
                 </p>
               </div>
             </div>
@@ -126,14 +119,14 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
               <div className="featured-box text-center">
                 <h4
                   className={
-                    "text-12  mb-0 " +
+                    "text-12 mb-0 " +
                     (darkTheme ? "text-white-50" : "text-muted")
                   }
                 >
-                  <span>650</span>+
+                  <span>9</span>
                 </h4>
                 <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
-                  Projects Done
+                  Certifications obtenues
                 </p>
               </div>
             </div>
@@ -141,20 +134,20 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
               <div className="featured-box text-center">
                 <h4
                   className={
-                    "text-12  mb-0 " +
+                    "text-12 mb-0 " +
                     (darkTheme ? "text-white-50" : "text-muted")
                   }
                 >
-                  <span>38</span>
+                  <span>100%</span>
                 </h4>
                 <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
-                  Get Awards
+                  Satisfaction client
                 </p>
               </div>
             </div>
           </div>
         </div>
-        {/* projects rewards counting end */}
+        {/* Fin des compteurs */}
       </div>
     </section>
   );

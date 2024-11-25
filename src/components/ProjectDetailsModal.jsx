@@ -1,11 +1,12 @@
 import React, { useEffect, useRef } from "react";
-
 import Slider from "react-slick";
 
 const ProjectDetailsModal = ({ darkTheme, projectDetails }) => {
+  // Référence pour le slider
   const sliderRef = useRef();
 
-  var settings = {
+  // Configuration du slider
+  const settings = {
     dots: true,
     arrows: false,
     infinite: true,
@@ -19,228 +20,136 @@ const ProjectDetailsModal = ({ darkTheme, projectDetails }) => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          initialSlide: 1,
         },
       },
     ],
   };
 
+  // Remet le slider à la première image lorsque les détails changent
   useEffect(() => {
-    sliderRef.current.slickGoTo(0);
+    if (sliderRef.current) sliderRef.current.slickGoTo(0);
   }, [projectDetails]);
 
   return (
-    <>
-      <div
-        className="modal fade bg-dark-1"
-        id="exampleModal"
-        tabIndex={-1}
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div className="modal-dialog modal-xl">
-          <div
-            className={
-              "modal-content " + (darkTheme ? "bg-dark-2 text-light" : "")
-            }
-          >
-            <div className="modal-body">
-              <button
-                type="button"
-                className={"btn-close " + (darkTheme ? "btn-close-white" : "")}
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              />
-              <div
-                className={
-                  "container ajax-container " +
-                  (darkTheme ? "bg-dark-2 text-light" : "")
-                }
+    <div
+      className="modal fade"
+      id="exampleModal"
+      tabIndex={-1}
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div className="modal-dialog modal-xl">
+        <div
+          className={`modal-content ${darkTheme ? "bg-dark-2 text-light" : ""}`}
+        >
+          <div className="modal-body">
+            {/* Bouton de fermeture */}
+            <button
+              type="button"
+              className={`btn-close ${darkTheme ? "btn-close-white" : ""}`}
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            />
+
+            {/* Contenu de la modale */}
+            <div className="container ajax-container">
+              {/* Titre du projet */}
+              <h2
+                className={`text-6 font-weight-600 text-center mb-4 ${
+                  darkTheme ? "text-white" : ""
+                }`}
               >
-                <h2
-                  className={
-                    "text-6 font-weight-600 text-center mb-4" +
-                    (darkTheme ? " text-white" : "")
-                  }
-                >
-                  {projectDetails?.title}
-                </h2>
-                <div className="row g-4">
-                  <div className="col-md-7">
-                    <Slider {...settings} ref={sliderRef}>
-                      <div className="item">
-                        <img
-                          className="img-fluid"
-                          alt=""
-                          src={projectDetails?.thumbImage}
-                        />
+                {projectDetails?.title}
+              </h2>
+
+              <div className="row g-4">
+                {/* Carrousel d'images */}
+                <div className="col-md-7">
+                  <Slider {...settings} ref={sliderRef}>
+                    {/* Image principale */}
+                    <div className="item">
+                      <img
+                        className="img-fluid"
+                        alt="Project Thumbnail"
+                        src={projectDetails?.thumbImage}
+                      />
+                    </div>
+                    {/* Images supplémentaires */}
+                    {projectDetails?.sliderImages?.map((image, index) => (
+                      <div className="item" key={index}>
+                        <img className="img-fluid" alt="" src={image} />
                       </div>
-                      {projectDetails?.sliderImages?.length > 0 &&
-                        projectDetails?.sliderImages?.map((image, index) => (
-                          <div className="item" key={index}>
-                            <img className="img-fluid" alt="" src={image} />
-                          </div>
-                        ))}
-                    </Slider>
-                  </div>
-                  <div className="col-md-5">
-                    <h4
-                      className={
-                        "text-4 font-weight-600" +
-                        (darkTheme ? " text-white" : "")
-                      }
-                    >
-                      Project Info:
-                    </h4>
-                    <p>{projectDetails?.projectInfo}</p>
-                    <h4
-                      className={
-                        "text-4 font-weight-600 mt-4" +
-                        (darkTheme ? " text-white" : "")
-                      }
-                    >
-                      Project Details:
-                    </h4>
-                    <ul
-                      className={
-                        "list-style-2 " + (darkTheme ? "list-style-light" : "")
-                      }
-                    >
-                      <li>
-                        <span
-                          className={
-                            "text-dark font-weight-600 me-2" +
-                            (darkTheme ? " text-white" : "")
-                          }
-                        >
-                          Client:
-                        </span>
-                        {projectDetails?.client}
-                      </li>
-                      <li>
-                        <span
-                          className={
-                            "text-dark font-weight-600 me-2" +
-                            (darkTheme ? " text-white" : "")
-                          }
-                        >
-                          Technologies:
-                        </span>
-                        {projectDetails?.technologies}
-                      </li>
-                      <li>
-                        <span
-                          className={
-                            "text-dark font-weight-600 me-2" +
-                            (darkTheme ? " text-white" : "")
-                          }
-                        >
-                          Industry:
-                        </span>
-                        {projectDetails?.industry}
-                      </li>
-                      <li>
-                        <span
-                          className={
-                            "text-dark font-weight-600 me-2" +
-                            (darkTheme ? " text-white" : "")
-                          }
-                        >
-                          Date:
-                        </span>
-                        {projectDetails?.date}
-                      </li>
-                      <li>
-                        <span
-                          className={
-                            "text-dark font-weight-600 me-2" +
-                            (darkTheme ? " text-white" : "")
-                          }
-                        >
-                          URL:
-                        </span>
-                        <a
-                          href={projectDetails?.url?.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {projectDetails?.url?.name}
-                        </a>
-                      </li>
-                    </ul>
-                    <div className="row no-gutters align-items-center">
-                      <div
-                        className={
-                          "col-auto text-dark font-weight-600" +
-                          (darkTheme ? " text-white" : "")
-                        }
+                    ))}
+                  </Slider>
+                </div>
+
+                {/* Détails du projet */}
+                <div className="col-md-5">
+                  <h4 className={`text-4 font-weight-600 ${darkTheme ? "text-white" : ""}`}>
+                    Informations sur le projet :
+                  </h4>
+                  <p>{projectDetails?.projectInfo}</p>
+
+                  <h4 className={`text-4 font-weight-600 mt-4 ${darkTheme ? "text-white" : ""}`}>
+                    Détails :
+                  </h4>
+                  <ul
+                    className={`list-style-2 ${darkTheme ? "list-style-light" : ""}`}
+                  >
+                    <li>
+                      <span className="font-weight-600 me-2">Client :</span>
+                      {projectDetails?.client}
+                    </li>
+                    <li>
+                      <span className="font-weight-600 me-2">Technologies :</span>
+                      {projectDetails?.technologies}
+                    </li>
+                    <li>
+                      <span className="font-weight-600 me-2">Industrie :</span>
+                      {projectDetails?.industry}
+                    </li>
+                    <li>
+                      <span className="font-weight-600 me-2">Date :</span>
+                      {projectDetails?.date}
+                    </li>
+                    <li>
+                      <span className="font-weight-600 me-2">URL :</span>
+                      <a
+                        href={projectDetails?.url?.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
-                        Share:
-                      </div>
-                      <div className="col-auto">
-                        <ul
-                          className={
-                            "social-icons" +
-                            (darkTheme ? " social-icons-muted" : "")
-                          }
-                        >
-                          <li className="social-icons-facebook">
-                            <a
-                              data-toggle="tooltip"
-                              href={projectDetails?.socialLinks?.facebook}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              data-original-title="Facebook"
-                            >
-                              <i className="fab fa-facebook-f" />
-                            </a>
-                          </li>
-                          <li className="social-icons-twitter">
-                            <a
-                              data-toggle="tooltip"
-                              href={projectDetails?.socialLinks?.twitter}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              data-original-title="Twitter"
-                            >
-                              <i className="fab fa-twitter" />
-                            </a>
-                          </li>
-                          <li className="social-icons-google">
-                            <a
-                              data-toggle="tooltip"
-                              href={projectDetails?.socialLinks?.google}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              data-original-title="Google"
-                            >
-                              <i className="fab fa-google" />
-                            </a>
-                          </li>
-                          <li className="social-icons-instagram">
-                            <a
-                              data-toggle="tooltip"
-                              href={projectDetails?.socialLinks?.instagram}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              data-original-title="Instagram"
-                            >
-                              <i className="fab fa-instagram" />
-                            </a>
-                          </li>
-                          <li className="social-icons-email">
-                            <a
-                              data-toggle="tooltip"
-                              href={projectDetails?.socialLinks?.mail}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              data-original-title="Email"
-                            >
-                              <i className="fas fa-envelope" />
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
+                        {projectDetails?.url?.name}
+                      </a>
+                    </li>
+                  </ul>
+
+                  {/* Liens de partage */}
+                  <div className="row no-gutters align-items-center">
+                    <div className="col-auto">Partager :</div>
+                    <div className="col-auto">
+                      <ul
+                        className={`social-icons ${
+                          darkTheme ? "social-icons-muted" : ""
+                        }`}
+                      >
+                        {projectDetails?.socialLinks &&
+                          Object.entries(projectDetails.socialLinks).map(
+                            ([key, link]) => (
+                              <li key={key} className={`social-icons-${key}`}>
+                                <a
+                                  href={link}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  data-toggle="tooltip"
+                                  title={key}
+                                >
+                                  <i className={`fab fa-${key}`} />
+                                </a>
+                              </li>
+                            )
+                          )}
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -249,7 +158,7 @@ const ProjectDetailsModal = ({ darkTheme, projectDetails }) => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

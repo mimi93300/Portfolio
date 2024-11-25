@@ -19,9 +19,9 @@ const Footer = ({ classicHeader, darkTheme, handleNavClick }) => {
                   handleNavClick("home");
                 }}
               >
-                Simone
+                Mariam
               </a>
-              . All Rights Reserved.
+              . Tous droits réservés.
             </p>
           </div>
           <div className="col-lg-6">
@@ -33,7 +33,7 @@ const Footer = ({ classicHeader, darkTheme, handleNavClick }) => {
                   data-bs-target="#terms-policy"
                   href="#terms-policy"
                 >
-                  Terms &amp; Policy
+                  Conditions &amp; Politique
                 </a>
               </li>
               <li className="nav-item">
@@ -43,7 +43,7 @@ const Footer = ({ classicHeader, darkTheme, handleNavClick }) => {
                   data-bs-target="#disclaimer"
                   href="#disclaimer"
                 >
-                  Disclaimer
+                  Mentions légales
                 </a>
               </li>
             </ul>

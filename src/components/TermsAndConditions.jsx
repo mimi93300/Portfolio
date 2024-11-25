@@ -19,97 +19,90 @@ const TermsAndConditions = ({ darkTheme }) => {
         >
           <div className="modal-header">
             <h5 className={"modal-title " + (darkTheme ? "text-white" : "")}>
-              Terms &amp; Policy
+              Conditions générales et politique de confidentialité
             </h5>
             <button
               type="button"
               className={"btn-close " + (darkTheme ? "btn-close-white" : "")}
               data-bs-dismiss="modal"
-              aria-label="Close"
+              aria-label="Fermer"
             />
           </div>
           <div className="modal-body p-4">
             <p>
-              Simply dummy text of the printing and typesetting industry. Lorem
-              Ipsum has been the industry's standard dummy text ever since the
-              1500s, when an unknown printer took a galley of type and scrambled
-              it to make a type specimen book. It has survived not only five
-              centuries, but also the leap into electronic typesetting,
-              remaining essentially unchanged.
+              Bienvenue dans notre section des conditions générales et de la
+              politique de confidentialité. Nous attachons une grande
+              importance à votre vie privée et à votre compréhension de nos
+              pratiques.
             </p>
             <h3 className={"mb-3 mt-4 mt-4 " + (darkTheme ? "text-white" : "")}>
-              Terms of Use
+              Conditions d'utilisation
             </h3>
             <p>
-              It has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. Simply
-              dummy text of the printing and typesetting industry.
+              En utilisant notre site, vous acceptez nos conditions d'utilisation, 
+              qui incluent le respect de nos règles concernant l'accès et l'utilisation des services.
             </p>
             <h5 className={"text-4 mt-4 " + (darkTheme ? "text-white" : "")}>
-              Part I – Information Simone collects and controls
+              Partie I – Informations collectées et contrôlées
             </h5>
             <p>
-              Lorem Ipsum has been the industry's standard dummy text ever since
-              the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book.
+              Nous collectons des informations personnelles uniquement lorsque
+              cela est nécessaire pour fournir nos services, comme votre nom,
+              votre adresse e-mail, et vos préférences utilisateur.
             </p>
             <h5 className={"text-4 mt-4 " + (darkTheme ? "text-white" : "")}>
-              Part II – Information that Simone processes on your behalf
+              Partie II – Informations traitées pour votre compte
             </h5>
             <p>
-              Lorem Ipsum has been the industry's standard dummy text ever since
-              the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book.
+              Nous pouvons traiter des informations supplémentaires pour fournir
+              des fonctionnalités spécifiques, comme l'historique des
+              transactions ou les données analytiques nécessaires à
+              l'amélioration de nos services.
             </p>
             <h5 className={"text-4 mt-4 " + (darkTheme ? "text-white" : "")}>
-              Part III – General
+              Partie III – Généralités
             </h5>
             <p>
-              It has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. Lorem
-              Ipsum has been the industry's standard dummy text ever since the
-              1500s, when an unknown printer took a galley of type and scrambled
-              it to make a type specimen book.
+              Toutes les données collectées sont sécurisées et utilisées dans
+              le respect des réglementations applicables. Nous ne partagerons
+              jamais vos informations personnelles sans votre consentement.
             </p>
             <h3 className={"mb-3 mt-4 " + (darkTheme ? "text-white" : "")}>
-              Privacy Policy
+              Politique de confidentialité
             </h3>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              Votre confidentialité est importante pour nous. Cette section
+              explique comment nous utilisons et protégeons vos données
+              personnelles.
             </p>
             <ol className="lh-lg">
               <li>
-                Lisque persius interesset his et, in quot quidam persequeris
-                vim, ad mea essent possim iriure.
+                Nous utilisons vos informations pour personnaliser votre
+                expérience sur notre site.
               </li>
               <li>
-                Quidam lisque persius interesset his et, Lisque persius
-                interesset his et, in quot quidam persequeris vim, ad mea essent
-                possim iriure.
+                Nous ne partageons vos données qu'avec des partenaires
+                approuvés, si nécessaire pour le service.
               </li>
               <li>
-                In quot quidam persequeris vim, ad mea essent possim iriure.
-                Quidam lisque persius interesset his et.
+                Vous avez le droit de demander l'accès ou la suppression de vos
+                données personnelles.
               </li>
               <li>
-                Quidam lisque persius interesset his et, Lisque persius
-                interesset his et.
+                Nous suivons les normes de sécurité les plus strictes pour
+                protéger vos données.
               </li>
               <li>
-                Interesset his et, Lisque persius interesset his et, in quot
-                quidam persequeris vim, ad mea essent possim iriure.
+                Notre politique est régulièrement mise à jour pour se
+                conformer aux réglementations en vigueur.
               </li>
               <li>
-                Persius interesset his et, Lisque persius interesset his et, in
-                quot quidam persequeris vim, ad mea essent possim iriure.
+                Si vous avez des questions concernant notre politique de
+                confidentialité, contactez notre service client.
               </li>
               <li>
-                Quot quidam persequeris vim Quidam lisque persius interesset his
-                et, Lisque persius interesset his et, in quot quidam persequeris
-                vim, ad mea essent possim iriure.
+                En continuant à utiliser notre site, vous acceptez nos
+                conditions générales et notre politique de confidentialité.
               </li>
             </ol>
           </div>
