@@ -81,7 +81,7 @@ const Resume = ({ classicHeader, darkTheme }) => {
         {/* Heading end*/}
         <div className="row gx-5">
           {/* My Education */}
-          <div className="col-md-6">
+          <div className="col-md-12">
             <h2
               className={
                 "text-6 fw-600 mb-4 " + (darkTheme ? "text-white" : "")
